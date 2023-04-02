@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { FormTitle, FormLabels, DisabledOptions, Country, State, District, Place, AddressType } from "./../../shared/constants/common.constant";
-import { DataFormatService } from "src/app/shared/service/data-format.service";
+import { FormTitle, FormLabels, DisabledOptions, AddressType } from "./../../shared/constants/common.constant";
+import { DataFormatService } from "./../../shared/service/data-format.service";
 
 @Component({
   selector: "app-edit-address",
