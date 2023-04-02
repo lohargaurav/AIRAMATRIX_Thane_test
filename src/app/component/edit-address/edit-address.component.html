@@ -1,0 +1,54 @@
+  <div class="center">
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        {{ title }}
+      </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <!--- Select Country-->
+      <div>
+        <mat-label>{{ labels.country }}:</mat-label><br>
+        <mat-form-field appearance="outline">
+          <mat-select [placeholder]="disabledOptions.country" (selectionChange)="onChangeFetechData($event, dropDownTypes.country)">
+            <mat-option >{{disabledOptions.country}}</mat-option>
+            <mat-option [value]="dataKey" *ngFor="let dataKey of countryKeys;">{{countryData[dataKey].countryName || ''}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <!--- Select States-->
+      <div  *ngIf="stateKeys.length">
+        <mat-label>{{ labels.state }}:</mat-label><br>
+        <mat-form-field appearance="outline">
+          <mat-select [placeholder]="disabledOptions.state" (selectionChange)="onChangeFetechData($event, dropDownTypes.state)">
+            <mat-option >{{disabledOptions.state}}</mat-option>
+            <mat-option [value]="dataKey" *ngFor="let dataKey of stateKeys;">{{stateData[dataKey].stateName || ''}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <!--- Select Districts-->
+      <div *ngIf="districtKeys.length">
+        <mat-label>{{ labels.district }}:</mat-label><br>
+        <mat-form-field appearance="outline">
+          <mat-select [placeholder]="disabledOptions.district" (selectionChange)="onChangeFetechData($event, dropDownTypes.district)">
+            <mat-option >{{disabledOptions.district}}</mat-option>
+            <mat-option [value]="dataKey" *ngFor="let dataKey of districtKeys;">{{districtData[dataKey].districtName || ''}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <!--- Select palce-->
+      <div  *ngIf="placeKeys.length">
+        <mat-label>{{ labels.place }}:</mat-label><br>
+        <mat-form-field appearance="outline">
+          <mat-select [placeholder]="disabledOptions.place">
+            <mat-option >{{disabledOptions.place}}</mat-option>
+            <mat-option [value]="dataKey" *ngFor="let dataKey of placeKeys;">{{placeData[dataKey].placeName || ''}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+  
