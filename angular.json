@@ -25,7 +25,7 @@
               "src/assets"
             ],
             "styles": [
-              "@node_module/material/prebuilt-themes/deeppurple-amber.css",
+              "./node_module/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -88,7 +88,7 @@
               "src/assets"
             ],
             "styles": [
-              "@node_module/material/prebuilt-themes/deeppurple-amber.css",
+              "./node_module/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
             "scripts": []
